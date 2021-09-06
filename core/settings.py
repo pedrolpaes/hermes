@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog',
     'blog_api',
+    'projetos',
     'rest_framework',
     'corsheaders',
     'users',
@@ -147,7 +148,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
 ]
 # Custom user model
-AUTH_USER_MODEL = 'users.NewUser'
+AUTH_USER_MODEL = 'users.Usuario'
 
 # simple jwt settings
 

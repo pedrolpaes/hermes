@@ -2,16 +2,16 @@ from rest_framework_simplejwt.views import TokenObtainPairView
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from .serializers import CustomUserSerializer
+from .serializers import CriarUsuarioSerializer
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework.permissions import AllowAny
 
 
-class CustomUserCreate(APIView):
+class Criar_usuario(APIView):
     permission_classes = [AllowAny]
 
     def post(self, request, format='json'):
-        serializer = CustomUserSerializer(data=request.data)
+        serializer = CriarUsuarioSerializer(data=request.data)
         if serializer.is_valid():
             user = serializer.save()
             if user:
