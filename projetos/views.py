@@ -4,8 +4,8 @@ from .models import Projeto
 from .serializers import ProjetoSerializer
 from rest_framework.permissions import SAFE_METHODS, BasePermission, IsAdminUser, DjangoModelPermissions, IsAuthenticatedOrReadOnly
 
-class PostUserWritePermission(BasePermission):
-    message = "Editing posts is restricted to the author only."
+class ProjetoUserWritePermission(BasePermission):
+    message = "A edição de postagens de projetos é restrita apenas ao autor."
     
     def has_object_permission(self, request, view, obj):
         if request.method in SAFE_METHODS:
@@ -19,7 +19,7 @@ class ProjetosList(generics.ListCreateAPIView):
     serializer_class = ProjetoSerializer
     
 
-class ProjetoDetail(generics.RetrieveUpdateDestroyAPIView, PostUserWritePermission):
-    permission_classes = [PostUserWritePermission]
+class ProjetoDetail(generics.RetrieveUpdateDestroyAPIView, ProjetoUserWritePermission):
+    permission_classes = [ProjetoUserWritePermission]
     queryset = Projeto.objects.all()
     serializer_class = ProjetoSerializer
