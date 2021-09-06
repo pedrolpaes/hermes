@@ -4,7 +4,10 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from .serializers import CriarUsuarioSerializer
 from rest_framework_simplejwt.tokens import RefreshToken
-from rest_framework.permissions import AllowAny
+from rest_framework.permissions import AllowAny, IsAdminUser
+from rest_framework import generics
+from .models import Usuario
+from .serializers import ListUsuarioSerializer
 
 
 class Criar_usuario(APIView):
@@ -32,3 +35,9 @@ class BlacklistTokenUpdateView(APIView):
             return Response(status=status.HTTP_205_RESET_CONTENT)
         except Exception as e:
             return Response(status=status.HTTP_400_BAD_REQUEST)
+
+
+class UsuarioList(generics.ListCreateAPIView):
+    permission_classes = [AllowAny,]  #for lists 
+    queryset = Usuario.objects.all()
+    serializer_class = ListUsuarioSerializer

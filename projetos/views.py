@@ -20,6 +20,6 @@ class ProjetosList(generics.ListCreateAPIView):
     
 
 class ProjetoDetail(generics.RetrieveUpdateDestroyAPIView, ProjetoUserWritePermission):
-    permission_classes = [ProjetoUserWritePermission]
+    permission_classes = [ProjetoUserWritePermission, IsAuthenticatedOrReadOnly]
     queryset = Projeto.objects.all()
     serializer_class = ProjetoSerializer
