@@ -7,8 +7,13 @@ htmlcov/
 .coverage.*
 .cache
 
+# Virtual environment 
 .venv
 
+# Locally saved credentials and secrets
+.env
+
+# Miscellaneous
 notes.md
 commands.txt
 
