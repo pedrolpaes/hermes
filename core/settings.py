@@ -6,7 +6,7 @@ from django.conf import UserSettingsHolder
 #env = Env()
 #env.read_env(os.path.join(BASE_DIR, '.env'))
 #SECRET_KEY = 'django-insecure-m)tmcn$4(ore@&a4*zhb!_15+^234sf_t%vqc0yj8hw&s9punv'
-SECRET_KEY = env('SECRET_KEY', 'sample_secret')
+SECRET_KEY = env.str("SECRET_KEY")
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
