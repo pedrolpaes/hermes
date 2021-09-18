@@ -1,6 +1,8 @@
 from pathlib import Path
 from datetime import timedelta
 from django.conf import UserSettingsHolder
+from environs import Env
+import dj_database_url
 
 # SECURITY WARNING: keep the secret key used in production secret!
 #env = Env()
