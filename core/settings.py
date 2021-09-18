@@ -2,16 +2,14 @@ from pathlib import Path
 from datetime import timedelta
 from django.conf import UserSettingsHolder
 
-
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
-
-
-
 # SECURITY WARNING: keep the secret key used in production secret!
 #env = Env()
 #env.read_env(os.path.join(BASE_DIR, '.env'))
 #SECRET_KEY = 'django-insecure-m)tmcn$4(ore@&a4*zhb!_15+^234sf_t%vqc0yj8hw&s9punv'
+
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
+BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
+
 env = Env()
 env.read_env(BASE_DIR / ".env", recurse=False)
 
