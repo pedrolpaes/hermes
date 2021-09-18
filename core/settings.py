@@ -11,12 +11,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 #env = Env()
 #env.read_env(os.path.join(BASE_DIR, '.env'))
-SECRET_KEY = 'django-insecure-m)tmcn$4(ore@&a4*zhb!_15+^234sf_t%vqc0yj8hw&s9punv'
+#SECRET_KEY = 'django-insecure-m)tmcn$4(ore@&a4*zhb!_15+^234sf_t%vqc0yj8hw&s9punv'
+env = Env()
+env.read_env(BASE_DIR / ".env", recurse=False)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = false
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["https://logf01.herokuapp.com/", "127.0.0.1"]
 
 
 # Application definition
@@ -74,10 +76,7 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    "default": dj_database_url.config(default=f"sqlite:///{BASE_DIR}/db.sqlite3")
 }
 
 
@@ -172,3 +171,7 @@ SIMPLE_JWT = {
     'SLIDING_TOKEN_LIFETIME': timedelta(minutes=5),
     'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),
 }
+
+STATIC_ROOT = BASE_DIR / "staticfiles"
+
+STATIC_URL = '/static/'
