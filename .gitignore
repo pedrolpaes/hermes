@@ -6,7 +6,7 @@ htmlcov/
 .coverage
 .coverage.*
 .cache
-
+.idea
 # Virtual environment 
 .venv
 
