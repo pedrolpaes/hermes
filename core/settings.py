@@ -22,7 +22,7 @@ SECRET_KEY = env.str("SECRET_KEY")
 DEBUG = False
 
 
-ALLOWED_HOSTS = ["https://logf01.herokuapp.com/"]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
