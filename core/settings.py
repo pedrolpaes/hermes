@@ -22,7 +22,7 @@ SECRET_KEY = env.str("SECRET_KEY")
 DEBUG = False
 
 
-ALLOWED_HOSTS = ["https://logf01.herokuapp.com/", "127.0.0.1"]
+ALLOWED_HOSTS = ["https://logf01.herokuapp.com/"]
 
 
 # Application definition
@@ -137,8 +137,6 @@ REST_FRAMEWORK = {
 }
 
 CORS_ALLOWED_ORIGINS = [
-    "http://127.0.0.1:3000",
-    "http://localhost:3000",
     "https://logf01.herokuapp.com",
 ]
 # Custom user model
