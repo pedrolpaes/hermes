@@ -27,6 +27,7 @@ Para testar os endpoints/chamadas de API escolha:
 1. `$ python manage.py runserver`
 2. 
 
+---
 
 #### Endpoint para o cadastro do usuário
 
