@@ -55,8 +55,6 @@ Status: 201 Created
 	“user_name”: “Eumesma”
 }
 
-
-
 ---
 
 #### Endpoint para liberação dos tokens de autentificação “access” e “refresh” (JWT)
@@ -91,8 +89,6 @@ Status: 200 OK
 
 }
 
-
-
 ---
 
 #### Endpoint para atualizar o “refresh” token
@@ -112,7 +108,6 @@ Exemplo do **Request**:
 }
 
 
-
 Exemplo do **Response**:
 
 Status: 200 OK
@@ -121,8 +116,6 @@ Status: 200 OK
   "access": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjMxNDEzMjU0LCJqdGkiOiI0ODY3ZmMxY2RmYWY0YmI2OTQyMzdjNTZiN2Y4ZjZiMyIsInVzZXJfaWQiOjR9.CKxReV_-GgDx3ndJ3AmvBeZG_0lHBXIfT3ckHD_xn10",
   "refresh": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTYzMTQ5OTM1NCwianRpIjoiYWFmY2YxNDI4NGY4NDFiYWE3OGM3MzcxODBjNTcwNjQiLCJ1c2VyX2lkIjo0fQ.y0FW8o94OSzDpmtOS_vQerhW2MFfCye5nU7lpSCwdzA"
 }
-
-
 
 ---
 
@@ -162,4 +155,3 @@ Exemplo do **Response**:
   },
 
 {...}
-
