@@ -4,15 +4,13 @@ Usamos Django REST framework
 
 https://www.django-rest-framework.org/
 
+url do homolog: https://logf01.herokuapp.com/
+
 Para testar os endpoints/chamadas de API escolha:
 
 - `Postman`
 - `Insomnia`
 - VS extension `Thunder Client` 
-
-
-
-
 
 #### Depois clonado o respositorio, no terminal:
 
@@ -28,10 +26,7 @@ Para testar os endpoints/chamadas de API escolha:
 2. 
 
 ---
-
 #### Endpoint para o cadastro do usuário
-
-url do homolog: `https://logf01.herokuapp.com/`
 
 POST /usuario/cadastro/ 		
 
