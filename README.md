@@ -31,6 +31,8 @@ Para testar os endpoints/chamadas de API escolha:
 
 #### Endpoint para o cadastro do usuário
 
+url do homolog: `https://logf01.herokuapp.com/`
+
 POST /usuario/cadastro/ 		
 
 **Body** parameters
