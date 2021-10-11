@@ -41,3 +41,4 @@ class UsuarioList(generics.ListCreateAPIView):
     permission_classes = [AllowAny,]  #for lists 
     queryset = Usuario.objects.all()
     serializer_class = ListUsuarioSerializer
+

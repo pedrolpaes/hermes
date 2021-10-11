@@ -27,4 +27,4 @@ class CriarUsuarioSerializer(serializers.ModelSerializer):
 class ListUsuarioSerializer(serializers.ModelSerializer):
     class Meta:
         model = Usuario
-        fields = '__all__'
+        fields = ['email', 'user_name', 'nome', 'sobrenome', 'bio', 'genero', 'cpf', 'data_nascimento', 'cep', 'cidade', 'estado', 'is_staff', 'is_active', 'date_joined', 'last_login']
